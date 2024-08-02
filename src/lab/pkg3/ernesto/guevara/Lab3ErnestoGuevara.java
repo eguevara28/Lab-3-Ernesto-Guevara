@@ -37,56 +37,56 @@ public class Lab3ErnestoGuevara {
                     int aleatorio = random.nextInt(3) + 1;
 
                     if (decision == 1 && aleatorio == 1) {
-                        System.out.println("Elejiste: Piedra");
-                        System.out.println("La computadora elijio: Piedra");
+                        System.out.println("Elegiste: Piedra");
+                        System.out.println("La computadora eligio: Piedra");
                         System.out.println("El resultado es: Empate");
                     }
 
                     if (decision == 1 && aleatorio == 2) {
-                        System.out.println("Elejiste: Piedra");
-                        System.out.println("La computadora elijio: Papel");
+                        System.out.println("Elegiste: Piedra");
+                        System.out.println("La computadora eligio: Papel");
                         System.out.println("El resultado es: Gano la computadora");
                     }
 
                     if (decision == 1 && aleatorio == 3) {
-                        System.out.println("Elejiste: Piedra");
-                        System.out.println("La computadora elijio: Tijera");
+                        System.out.println("Elegiste: Piedra");
+                        System.out.println("La computadora eligio: Tijera");
                         System.out.println("El resultado es: Gano usted");
                     }
 
                     if (decision == 2 && aleatorio == 1) {
-                        System.out.println("Elejiste: Papel");
-                        System.out.println("La computadora elijio: Piedra");
+                        System.out.println("Elegiste: Papel");
+                        System.out.println("La computadora eligio: Piedra");
                         System.out.println("El resultado es: Gano usted");
                     }
 
                     if (decision == 2 && aleatorio == 2) {
-                        System.out.println("Elejiste: Papel");
-                        System.out.println("La computadora elijio: Papel");
+                        System.out.println("Elegiste: Papel");
+                        System.out.println("La computadora eligio: Papel");
                         System.out.println("El resultado es: Empate");
                     }
 
                     if (decision == 2 && aleatorio == 3) {
-                        System.out.println("Elejiste: Papel");
-                        System.out.println("La computadora elijio: Tijera");
+                        System.out.println("Elegiste: Papel");
+                        System.out.println("La computadora eligio: Tijera");
                         System.out.println("El resultado es: Gano la computadora");
                     }
 
                     if (decision == 3 && aleatorio == 1) {
-                        System.out.println("Elejiste: Tijera");
-                        System.out.println("La computadora elijio: Piedra");
+                        System.out.println("Elegiste: Tijera");
+                        System.out.println("La computadora eligio: Piedra");
                         System.out.println("El resultado es: Gano la computadora");
                     }
 
                     if (decision == 3 && aleatorio == 2) {
-                        System.out.println("Elejiste: Tijera");
-                        System.out.println("La computadora elijio: Papel");
+                        System.out.println("Elegiste: Tijera");
+                        System.out.println("La computadora eligio: Papel");
                         System.out.println("Resultado: Gano usted");
                     }
 
                     if (decision == 3 && aleatorio == 3) {
-                        System.out.println("Elejiste: Tijera");
-                        System.out.println("La computadora elijio: Tijera");
+                        System.out.println("Elegiste: Tijera");
+                        System.out.println("La computadora eligio: Tijera");
                         System.out.println("El resultado es: Empate");
                     }
 
@@ -100,6 +100,7 @@ public class Lab3ErnestoGuevara {
             }
 
             if (op == 2) {
+                while (true){
                 System.out.println("Ingrese un numero para sumar sus digitos");
                 String numeros = lea.next();
 
@@ -113,9 +114,18 @@ public class Lab3ErnestoGuevara {
                 }
 
                 System.out.println(mostrarsuma + " = " + sumadigitos);
+                
+                    System.out.println("Desea volver a intentarlo? (s/n)");
+                    char volver=lea.next().charAt(0);
+                    
+                    if(volver=='n'){
+                        break;
+                    }
+                }
             }
 
             if (op == 3) {
+                while (true){
                 System.out.println("Ingrese un numero");
                 int numero = lea.nextInt();
                 for (int i = 0; i < numero; i++) {
@@ -126,6 +136,14 @@ public class Lab3ErnestoGuevara {
                         System.out.print(j + " ");
                     }
                     System.out.println();
+                }
+                
+                    System.out.println("Desea volver a intentarlo? (s/n)");
+                    char volver=lea.next().charAt(0);
+                    
+                    if(volver=='n'){
+                        break;
+                    }
                 }
             }
             
