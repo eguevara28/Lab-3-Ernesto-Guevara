@@ -89,33 +89,50 @@ public class Lab3ErnestoGuevara {
                         System.out.println("La computadora elijio: Tijera");
                         System.out.println("El resultado es: Empate");
                     }
-                    
+
                     System.out.println("Desea volver a jugar? (s/n)");
-                    char volver=lea.next().charAt(0);
-                    
-                    if(volver=='n'){
+                    char volver = lea.next().charAt(0);
+
+                    if (volver == 'n') {
                         break;
                     }
                 }
             }
-            
-            if(op==2){
+
+            if (op == 2) {
                 System.out.println("Ingrese un numero para sumar sus digitos");
-                String numeros=lea.next();
-                
-                String mostrarsuma="";
-                int sumadigitos=0;
-                
+                String numeros = lea.next();
+
+                String mostrarsuma = "";
+                int sumadigitos = 0;
+
                 for (int i = 0; i < numeros.length(); i++) {
-                    String separacion=numeros.substring(i);
-                    mostrarsuma+=separacion+" + ";
-                    int digitos=Integer.parseInt(separacion);
-                    sumadigitos+=digitos;
+                    mostrarsuma += numeros.charAt(i)+" + ";
+                    int digitos = Integer.parseInt(String.valueOf(numeros.charAt(i)));
+                    sumadigitos += digitos;
                 }
-                
-                System.out.println(mostrarsuma+" = "+sumadigitos);
+
+                System.out.println(mostrarsuma + " = " + sumadigitos);
+            }
+
+            if (op == 3) {
+                System.out.println("Ingrese un numero");
+                int numero = lea.nextInt();
+                for (int i = 0; i < numero; i++) {
+                    for (int k = 0; k < i; k++) {
+                        System.out.print("  ");
+                    }
+                    for (int j = numero - i; j >= 1; j--) {
+                        System.out.print(j + " ");
+                    }
+                    System.out.println();
+                }
+            }
+            
+            if(op==4){
+                System.out.println("Nos vemos");
+                break;
             }
         }
     }
-
 }
